@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://media0.giphy.com/media/MyWrJJIdAfoJuEPlLP/200w.gif?cid=6c09b952xhjgzxf152z6lrmt11lnybnesk7uvo31vxb5936y&ep=v1_gifs_search&rid=200w.gif&ct=g');
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    grid-column: span 2;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item label {
+    margin-bottom: 5px;
+}
+
+.item input,
+.item select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.item.gender div {
+    display: flex;
+    gap: 10px;
+}
+
+.phone {
+    display: flex;
+    gap: 10px;
+}
+
+.phone input[type="text"] {
+    max-width: 60px;
+}
+
+.phone input[type="number"] {
+    flex-grow: 1;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input {
+    padding-right: 30px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

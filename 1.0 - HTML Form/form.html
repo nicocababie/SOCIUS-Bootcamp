@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOCIUS Form</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="form">
+        <h1>Welcome! We want to know about you:</h1>
+        <formmethod="post">
+            <div class="container">
+                <div class="item">
+                    <label for="idEmail">Email</label>
+                    <input type="email" name="Email" id="idEmail" placeholder="example@mailinator.com">
+                </div>
+                <div class="item">
+                    <label for="idPhone">Phone number</label>
+                    <div class="phone">
+                        <select name="prefix" id="idPrefix">
+                            <option value="0">Prefix</option>
+                            <option value="+52">México (+52)</option>
+                            <option value="+54">Argentina (+54)</option>
+                            <option value="+56">Chile (+56)</option>
+                            <option value="+57">Colombia (+57)</option>
+                            <option value="+598">Uruguay (+598)</option>
+                        </select>
+                        <input type="number" name="phone" id="idPhone" placeholder="Number" min="0">
+                    </div>
+                </div>
+                <div class="item">
+                    <label for="idDate">Birthday</label>
+                    <input type="date" name="date" id="idDate">
+                </div>
+                <div class="item">
+                    <label for="idPassword">Password</label>
+                    <div class="password-container">
+                        <input type="password" name="password" id="idPassword" placeholder="At least 8 characters">
+                        <span class="toggle-password" id="togglePassword">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>                
+                <div class="item">
+                    <label for="idCity">City</label>
+                    <select name=" city" id="idCity">
+                        <option value=0>Select a city</option>
+                        <option value=1>Montevideo</option>
+                        <option value=2>Canelones</option>
+                        <option value=3>San José</option>
+                        <option value=4>Rocha</option>
+                        <option value=5>Colonia</option>
+                        <option value=6>Maldonado</option>
+                        <option value=7>Otro</option>
+                    </select>
+                </div>
+                <div class="item gender">
+                    <label for="idGenero">Gender</label>
+                    <div>
+                        <input type="radio" name="gender" value="M" id="idMale">
+                        <label for="idMale">Male</label>
+                        <input type="radio" name="gender" value="F" id="idFemale">
+                        <label for="idFemale">Female</label>
+                        <input type="radio" name="gender" value="O" id="idOther">
+                        <label for="idOther">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <button type="button" onClick="submit()">Submit</button>
+            </div>
+            </form>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
