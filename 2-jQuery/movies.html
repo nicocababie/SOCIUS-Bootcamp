@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <button id="get-movie" class="btn btn-primary">Get random movie</button>
+        <div class="movie-details mt-3" id="movie-details">
+
+        </div>
+        <div class="form-group mt-3">
+            <label for="movie-select">Movies obtained:</label>
+            <select class="form-control" id="movie-select">
+                <option value="">Select a movie</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#get-movie').click(function() {
+                $.ajax({
+                    url: 'https://www.codigo-alfa.cl/aglo/Tester/peliculaAleatoria',
+                    method: 'GET',
+                    success: function(response) {
+                        var pelicula = response.pelicula;
+                        
+                        $('#movie-details').html(`
+                            <h3>${pelicula.title} (${pelicula.year})</h3>
+                            <p>Genre: ${pelicula.genre}</p>
+                        `);
+                        
+                        $('#movie-select').append(`<option value="${pelicula.id}">${pelicula.title}</option>`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

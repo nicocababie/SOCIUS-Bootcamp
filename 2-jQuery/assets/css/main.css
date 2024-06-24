@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    background-image: url(../images/cinema.jpg);
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+.movie-details {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: red;
+    border-color: red;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:focus-visible {
+    background-color: darkred;
+    border-color: darkred;
+    box-shadow: none;
+}
+
+#movie-select {
+    width: 30%;
+    margin: 0 auto;
+}
+
